@@ -1,0 +1,212 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-top: 80px;  /* Add padding to prevent content from being overlapped by fixed header */
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;  /* Make the header fixed */
+    top: 0;  /* Position the header at the top of the page */
+    left: 0;
+    width: 100%;  /* Ensure the header spans the entire width */
+    z-index: 1000;  /* Ensure the header stays above other content */
+}
+
+/* Ensure the content below the header is not overlapped */
+header .logo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Centering the navigation and making font slightly bigger */
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav items horizontally */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Align the nav items in a row */
+    gap: 20px; /* Add some space between the items */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly bigger font size */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column; /* Stack the products vertically */
+    gap: 20px; /* Space between products */
+}
+
+/* Product Styling */
+.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make each product take up the full width */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensure image size is 5x5 cm */
+.product img {
+    width: 5cm;    /* Set image width to 5 cm */
+    height: 5cm;   /* Set image height to 5 cm */
+    object-fit: cover; /* Ensure image does not get distorted */
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* Cart Section */
+.cart {
+    margin-top: 40px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cart button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cart button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    /* Ensure the products remain in a column layout on smaller screens */
+    .products {
+        flex-direction: column;
+        align-items: center; /* Center the products */
+        gap: 30px; /* Increase the gap for better spacing */
+    }
+
+    .product {
+        width: 80%; /* Take up 80% of the screen width */
+        max-width: 350px; /* Prevent overly stretched products */
+    }
+
+    nav ul li {
+        display: block; /* Stack the nav items vertically on small screens */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo h1 {
+        font-size: 1.5rem; /* Slightly smaller logo text for small screens */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+
+    .cart button, .product button {
+        font-size: 1rem; /* Adjust button size for smaller screens */
+        padding: 8px 16px; /* Smaller buttons for mobile */
+    }
+/* Contact Page Styling */
+.contact-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info strong {
+    font-weight: bold;
+}
+}  

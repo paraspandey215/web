@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>My Online Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Updated link to Contact page -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section for Products -->
+    <main>
+        <br>
+        <section class="products">
+            <br>
+            <h1>Our Products</h1>
+
+            <!-- Product 1 -->
+            <div class="product" data-product-id="1" data-product-name="Product 1 Name" data-product-price="100">
+                <img src="image" alt="Product 1">
+                <h3>Product 1 Name</h3>
+                <p>Price: ₹100</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product" data-product-id="2" data-product-name="Product 2 Name" data-product-price="100">
+                <img src="Your image in this section" alt="Product 2">
+                <h3>Product 2 Name</h3>
+                <p>Price: ₹100</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product" data-product-id="3" data-product-name="Product 3 Name" data-product-price="100">
+                <img src="Your image in this section" alt="Product 3">
+                <h3>Product 3 Name</h3>
+                <p>Price: ₹100</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product" data-product-id="4" data-product-name="Product 4 Name" data-product-price="100">
+                <img src="Your image in this section" alt="Product 4">
+                <h3>Product 4 Name</h3>
+                <p>Price: ₹100</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <p>Items: <span id="cart-item-count">0</span></p>
+            <p>Total: ₹<span id="cart-total">0.00</span></p>
+            <button id="checkout-button">Checkout</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
